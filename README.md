@@ -302,25 +302,14 @@ The top navigation bar features a **"Demo Switcher"** for 1-click instant switch
 
 ---
 
-## 🌐 Pushing to GitHub
+## 🌐 GitHub Repository & Cloning
 
-To push this project to your GitHub repository `shipguard`:
+The project is hosted on GitHub at [https://github.com/Adityax2711/Shipguard](https://github.com/Adityax2711/Shipguard).
 
-### 1. Create a New Repository on GitHub
-Go to [GitHub New Repository](https://github.com/new) and name it **`shipguard`** (keep it public or private, without adding a README or .gitignore since they already exist here).
-
-### 2. Connect Remote and Push
-Run the following commands in the project root:
-
+### Cloning the Project
 ```bash
-# Add your GitHub repository remote (replace <YOUR_USERNAME> with your GitHub username)
-git remote add origin https://github.com/<YOUR_USERNAME>/shipguard.git
-
-# Ensure current branch is main
-git branch -M main
-
-# Push the committed project to GitHub
-git push -u origin main
+git clone https://github.com/Adityax2711/Shipguard.git
+cd Shipguard
 ```
 
 ---
