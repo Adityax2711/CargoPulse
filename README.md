@@ -204,6 +204,16 @@ npm run start:frontend
 ```
 Visit **[http://localhost:5173](http://localhost:5173)** in your browser.
 
+### Option C: Deploy to Vercel (Multi-Service Project)
+ShipGuard includes root `vercel.json` configured for Vercel Services:
+- **Backend Service**: FastAPI (`backend/`, mapped to `/api/(.*)` and `/uploads/(.*)`)
+- **Frontend Service**: Vite React SPA (`frontend/`, mapped to `/(.*)`)
+
+Deploy directly with Vercel CLI or connect your GitHub repository:
+```bash
+vercel
+```
+
 ---
 
 ## ⏱️ Background Scan-Gap Scheduler

@@ -2,8 +2,12 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data"
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+if os.getenv("VERCEL"):
+    DATA_DIR = Path("/tmp/shipguard_data")
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+else:
+    DATA_DIR = BASE_DIR / "data"
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 DB_PATH = os.getenv("SHIPGUARD_DB_PATH", str(DATA_DIR / "shipguard.db"))
 UPLOAD_DIR = Path(os.getenv("SHIPGUARD_UPLOAD_DIR", str(DATA_DIR / "uploads")))
@@ -23,4 +27,11 @@ CORS_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000"
 ]
+
+# Allow Vercel preview and production deployment URLs
+if os.getenv("VERCEL_URL"):
+    CORS_ORIGINS.append(f"https://{os.getenv('VERCEL_URL')}")
+if os.getenv("FRONTEND_URL") and os.getenv("FRONTEND_URL") not in CORS_ORIGINS:
+    CORS_ORIGINS.append(os.getenv("FRONTEND_URL"))
+
 
