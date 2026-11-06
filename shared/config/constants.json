@@ -1,0 +1,41 @@
+{
+  "couriers": [
+    { "id": "CR-FASTEX", "name": "FastEx" },
+    { "id": "CR-SWIFTPOST", "name": "SwiftPost" },
+    { "id": "CR-CITYLINK", "name": "CityLink" }
+  ],
+  "rates": {
+    "standard_rate": 0.004,
+    "fragile_rate": 0.008,
+    "clean_discount": 0.20,
+    "min_premium": 0.50,
+    "liability_cap": 100.00,
+    "advance_pct": 0.50
+  },
+  "thresholds": {
+    "warn_days": 2,
+    "lost_days": 14,
+    "shock_threshold_g": 10.0,
+    "weight_tolerance_pct": 5.0,
+    "auto_approve_limit": 50.00,
+    "fraud_claim_velocity_limit": 3
+  },
+  "shipment_statuses": [
+    "booked",
+    "picked_up",
+    "in_transit",
+    "hub",
+    "out_for_delivery",
+    "delivered",
+    "lost"
+  ],
+  "claim_statuses": [
+    "under_review",
+    "fraud_review",
+    "auto_approved",
+    "approved",
+    "denied",
+    "arbitration"
+  ]
+}
+

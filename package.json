@@ -1,0 +1,26 @@
+{
+  "name": "shipguard",
+  "version": "1.0.0",
+  "description": "ShipGuard - Parcel Protection & Claims Platform between E-commerce Sellers and Couriers",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt",
+    "seed": "cd backend && python -m app.seed",
+    "test": "cd backend && pytest -v",
+    "scheduler": "cd backend && python -m app.scheduler",
+    "scheduler:once": "cd backend && python -m app.scheduler --once",
+    "start:backend": "cd backend && python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload",
+    "start:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "cd backend && python -m uvicorn app.main:app --host 127.0.0.1 --port 8000"
+  },
+  "keywords": [
+    "parcel-protection",
+    "e-commerce",
+    "claims-automation",
+    "parametric-insurance",
+    "courier-telemetry"
+  ],
+  "author": "ShipGuard Team",
+  "license": "ISC"
+}
+
