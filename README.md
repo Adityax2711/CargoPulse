@@ -1,6 +1,6 @@
-# 🛡️ ShipGuard: Intelligent Parcel Protection & Automated Claims Platform
+# ⚡ CargoPulse: Intelligent Parcel Telemetry & Automated Claims Platform
 
-**ShipGuard** sits between e-commerce sellers and courier networks to eliminate package loss disputes, prolonged claims (typically 30–45 days), arbitrary denials, expensive insurance premiums, and carrier unaccountability.
+**CargoPulse** sits between e-commerce sellers and courier networks to eliminate package loss disputes, prolonged claims (typically 30–45 days), arbitrary denials, expensive insurance premiums, and carrier unaccountability.
 
 ---
 
@@ -12,8 +12,8 @@
 - **Custody "Black Holes"**: Once a package enters transit, neither seller nor courier has objective, timestamped telemetry showing exactly *where* or *when* an impact or loss occurred.
 - **Excessive Insurance Margins**: Standard shipping insurance charges 1.5%–3.0% of item value with high deductibles and adversarial claim processes.
 
-### How ShipGuard Solves It
-1. **Dynamic Packaging Guidance (Prevention)**: Before shipping, ShipGuard generates tailored packaging compliance rules based on category, value, and fragility.
+### How CargoPulse Solves It
+1. **Dynamic Packaging Guidance (Prevention)**: Before shipping, CargoPulse generates tailored packaging compliance rules based on category, value, and fragility.
 2. **Immutable Pickup Evidence Baseline**: The seller records weight, dimensions, condition, and photos before dispatch. This baseline is tamper-proof and locks the pre-transit state.
 3. **Custody Telemetry & Scan Gaps**: Courier transit scans capture timestamps, locations, scale weights, and g-force shock impacts ($\ge 10g$ automatically flags a transit irregularity; $>5\%$ weight deviation flags potential pilferage).
 4. **Parametric & Telemetry Claims Engine**: Objective claims are evaluated in milliseconds via sequential deterministic rules (a through f). If custody telemetry proves shock or a 14-day scan gap, payouts are **auto-approved instantly**.
@@ -205,7 +205,7 @@ npm run start:frontend
 Visit **[http://localhost:5173](http://localhost:5173)** in your browser.
 
 ### Option C: Deploy to Vercel (Multi-Service Project)
-ShipGuard includes root `vercel.json` configured for Vercel Services:
+CargoPulse includes root `vercel.json` configured for Vercel Services:
 - **Backend Service**: FastAPI (`backend/`, mapped to `/api/(.*)` and `/uploads/(.*)`)
 - **Frontend Service**: Vite React SPA (`frontend/`, mapped to `/(.*)`)
 
@@ -272,7 +272,7 @@ The top navigation bar features a **"Demo Switcher"** for 1-click instant switch
 1. **Book Protected Parcel with Clean Discount**
    - Log in as **Apex Electronics** (`apex@seller.com`).
    - Click **"+ Book Protected Parcel"**.
-   - Select **FastEx**, category **Electronics**, toggle **Fragile: ON**, declared value **$800.00**, toggle **ShipGuard Protection: ON**.
+   - Select **FastEx**, category **Electronics**, toggle **Fragile: ON**, declared value **$800.00**, toggle **CargoPulse Protection: ON**.
    - Live quote reflects: Base rate $0.8\% = \$6.40$, Seller Clean Record discount of $20\% = -\$1.28$, Final Premium = **\$5.12**.
    - Packaging guidance alerts: Anti-static ESD bags, dual-side FRAGILE stickers, and high-value security advisory ($> \$500$).
    - Click **"Confirm & Book Shipment"**.

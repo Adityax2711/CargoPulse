@@ -350,7 +350,7 @@ export default function BookingForm({ user, onShipmentCreated, onCancel }) {
                   </div>
                   <div>
                     <div className="font-bold text-xs text-white flex items-center space-x-2">
-                      <span>ShipGuard Parametric Protection</span>
+                      <span>CargoPulse Parametric Protection</span>
                       <span className="text-[10px] px-2 py-0.2 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/30">
                         Zero Deductible
                       </span>
@@ -475,7 +475,7 @@ export default function BookingForm({ user, onShipmentCreated, onCancel }) {
             </div>
 
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              ShipGuard generates mandatory handling packaging specifications dynamically to minimize transit shock:
+              CargoPulse generates mandatory handling packaging specifications dynamically to minimize transit shock:
             </p>
 
             <div className="space-y-2.5">

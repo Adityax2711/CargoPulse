@@ -13,10 +13,10 @@ def create_sample_images():
     """Generates clean placeholder parcel photos for demo."""
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
     colors = [
-        ("#1E293B", "#38BDF8", "ShipGuard Pickup Check #1"),
-        ("#0F172A", "#34D399", "ShipGuard Pickup Check #2"),
-        ("#18181B", "#F59E0B", "ShipGuard Transit Check"),
-        ("#450A0A", "#EF4444", "ShipGuard Damage Evidence")
+        ("#1E293B", "#38BDF8", "CargoPulse Pickup Check #1"),
+        ("#0F172A", "#34D399", "CargoPulse Pickup Check #2"),
+        ("#18181B", "#F59E0B", "CargoPulse Transit Check"),
+        ("#450A0A", "#EF4444", "CargoPulse Damage Evidence")
     ]
     img_names = ["parcel_box_front.jpg", "parcel_box_label.jpg", "parcel_box_side.jpg", "damage_crushed_corner.jpg"]
 
@@ -63,7 +63,7 @@ def seed_database():
         now_str = now.strftime("%Y-%m-%d %H:%M:%S")
 
         users = [
-            ("USR-SYSTEM", "ShipGuard System Engine", "system@shipguard.com", hashed_pwd, "admin", None),
+            ("USR-SYSTEM", "CargoPulse System Engine", "system@shipguard.com", hashed_pwd, "admin", None),
             ("USR-ADMIN", "Sarah Connor", "admin@shipguard.com", hashed_pwd, "admin", None),
             ("USR-SELLER1", "Apex Electronics", "apex@seller.com", hashed_pwd, "seller", None),
             ("USR-SELLER2", "Nova Retail", "nova@seller.com", hashed_pwd, "seller", None),

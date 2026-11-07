@@ -30,8 +30,8 @@ async def lifespan(app: FastAPI):
     yield
 
 app = FastAPI(
-    title="ShipGuard API",
-    description="Parcel protection and claims platform between e-commerce sellers and courier companies",
+    title="CargoPulse API",
+    description="Intelligent parcel telemetry and automated claims platform between e-commerce sellers and courier companies",
     version="1.0.0",
     lifespan=lifespan
 )
@@ -120,7 +120,7 @@ app.include_router(audit.router)
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "app": "ShipGuard", "version": "1.0.0"}
+    return {"status": "ok", "app": "CargoPulse", "version": "1.0.0"}
 
 # Serve frontend build if present
 DIST_DIR = BASE_DIR.parent / "frontend" / "dist"

@@ -5,7 +5,7 @@ from app.database import get_db_ctx, init_db
 from app.services.alerts_service import run_scan_gap_check
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-logger = logging.getLogger("ShipGuardScheduler")
+logger = logging.getLogger("CargoPulseScheduler")
 
 def execute_scan_gap_cycle():
     logger.info("Executing scan gap evaluation cycle...")
@@ -23,7 +23,7 @@ def execute_scan_gap_cycle():
         return None
 
 def start_scheduler_loop(interval_seconds: int = 3600):
-    logger.info(f"ShipGuard Hourly Background Scheduler started. Running every {interval_seconds} seconds.")
+    logger.info(f"CargoPulse Hourly Background Scheduler started. Running every {interval_seconds} seconds.")
     # Run once immediately on start
     execute_scan_gap_cycle()
     while True:

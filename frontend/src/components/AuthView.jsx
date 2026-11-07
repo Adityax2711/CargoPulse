@@ -5,6 +5,7 @@ import {
   Eye, EyeOff, KeyRound
 } from 'lucide-react';
 import { authApi } from '../api';
+import { BrandIcon, BrandLockup } from './BrandLogo';
 
 export default function AuthView({ onAuthSuccess, onQuickLogin }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -111,17 +112,21 @@ export default function AuthView({ onAuthSuccess, onQuickLogin }) {
         
         {/* Top Branding */}
         <div className="relative z-10">
-          <div className="inline-flex items-center space-x-2.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-6">
-            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span>Enterprise Parcel Protection Platform</span>
+          <div className="mb-8">
+            <BrandLockup name="CargoPulse" tagline="AUTONOMOUS TRANSIT TELEMETRY & CLAIMS" size="lg" />
+          </div>
+
+          <div className="inline-flex items-center space-x-2.5 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-300 text-xs font-semibold mb-6">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>Autonomous Logistics Protection Protocol</span>
           </div>
 
           <h2 className="text-3xl xl:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            The automated risk & claims infrastructure for modern logistics.
+            The telemetry-driven risk & claims infrastructure for modern shipping.
           </h2>
 
           <p className="text-slate-400 text-sm xl:text-base mt-4 leading-relaxed max-w-lg">
-            Couriers lose or damage 3–5% of packages while claims take 30–45 days. ShipGuard binds sellers and carriers to immutable telemetry baselines, parametric payouts, and accountability scorecards.
+            Traditional couriers leave packages in 40-day dispute black holes. Our platform binds sellers and carriers to immutable telemetry baselines, shock & weight delta monitoring, and instant parametric payouts.
           </p>
 
           {/* Key Value Metric Tiles */}
@@ -156,11 +161,13 @@ export default function AuthView({ onAuthSuccess, onQuickLogin }) {
           
           {/* Mobile Header Banner (Visible only on small screens) */}
           <div className="lg:hidden text-center mb-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-cyan-400 mb-3">
-              <Shield className="w-6 h-6" />
+            <div className="flex justify-center mb-3">
+              <BrandIcon className="w-12 h-12" />
             </div>
-            <h1 className="text-xl font-bold text-white tracking-tight">ShipGuard Platform</h1>
-            <p className="text-xs text-slate-400 mt-1">Parametric parcel protection & claims management</p>
+            <h1 className="text-xl font-black text-white tracking-tight">
+              Cargo<span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Pulse</span>
+            </h1>
+            <p className="text-xs text-slate-400 mt-1">Autonomous transit telemetry & instant claims</p>
           </div>
 
           {/* Main Auth Container */}

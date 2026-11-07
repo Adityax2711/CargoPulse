@@ -3,6 +3,7 @@ import {
   Shield, Package, Truck, User, LogOut, Sliders, 
   ChevronDown, Bell, Search, Activity, ExternalLink, HelpCircle
 } from 'lucide-react';
+import { BrandIcon } from './BrandLogo';
 
 export default function Navbar({
   user,
@@ -31,17 +32,18 @@ export default function Navbar({
           
           {/* Left: Brand Identity & Environment Tag */}
           <div className="flex items-center space-x-3 cursor-pointer shrink-0" onClick={() => setCurrentView("dashboard")}>
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-0.5 shadow-md shadow-indigo-600/20 flex items-center justify-center">
-              <div className="w-full h-full bg-[#0B0F19] rounded-[10px] flex items-center justify-center">
-                <Shield className="w-4 h-4 text-cyan-400" />
+            <BrandIcon className="w-9 h-9" />
+            <div className="flex flex-col">
+              <div className="flex items-baseline space-x-1.5 leading-none">
+                <span className="text-lg font-black tracking-tight text-white font-sans">
+                  Cargo<span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">Pulse</span>
+                </span>
+                <span className="hidden sm:inline-block text-[9px] font-bold px-1.5 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 uppercase tracking-widest">
+                  TELEMETRY
+                </span>
               </div>
-            </div>
-            <div className="flex items-baseline space-x-2">
-              <span className="text-lg font-extrabold tracking-tight text-white font-sans">
-                Ship<span className="text-cyan-400">Guard</span>
-              </span>
-              <span className="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-slate-800/90 text-slate-400 border border-slate-700/60 uppercase tracking-wider">
-                Enterprise
+              <span className="hidden sm:block text-[9px] font-mono tracking-widest text-slate-400 uppercase mt-0.5">
+                PARAMETRIC PARCEL DEFENSE
               </span>
             </div>
           </div>
